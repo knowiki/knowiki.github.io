@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+*.egg-info
+.cache
+.tox
+packages/*/build
+packages/*/dist
+webpack/node_modules
+*~
+*#
