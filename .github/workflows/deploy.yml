@@ -50,5 +50,5 @@ jobs:
         if: env.DEPLOY == 'true'
         run: lektor deploy -O '${{ env.OUTPUT }}' ghpages-https
         env:
-          LEKTOR_DEPLOY_USERNAME: lektor
+          LEKTOR_DEPLOY_USERNAME: knowiki
           LEKTOR_DEPLOY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
