@@ -20,11 +20,14 @@ contents:
 	complex and beautiful websites out of flat files — for people who do
         not want to make a compromise between a CMS and a static blog engine.
       <p>
+	一个灵活而强大的静态内容管理系统，用于从平面文件中构建复杂而漂亮的网站 - 适用于不想在 CMS 和静态博客引擎之间做出妥协的人。
+      <p>
         Getting your ideas implemented is as easy as frying an egg.
+      <p>实现你的想法就像煎鸡蛋一样简单。
     </div>
     <div class="col-md-4 visible-md-block visible-lg-block">
       <div class="download-btn"><a href="downloads/"
-        ><i class="glyphicon glyphicon-download-alt"></i> Download</a></div>
+        ><i class="glyphicon glyphicon-download-alt"></i> Download 下载</a></div>
     </div>
   </div>
 </div>
