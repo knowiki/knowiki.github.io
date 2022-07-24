@@ -1,4 +1,4 @@
-name: "Deploy site"
+name: "Deploy site / 部署网站"
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
     branches:
     - 'main'
   workflow_dispatch:
-    # Allow manually running workflow
+    # Allow manually running workflow 允许手动运行工作流
   schedule:
     - cron: '23 2 * * *'
 
@@ -23,22 +23,22 @@ env:
 
 jobs:
   build:
-    name: Build lektor website
+    name: Build lektor website / 构建lektor网站
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - uses: actions/setup-python@v2
 
-      - name: Install Lektor
+      - name: Install Lektor / 安装 Lektor
         run: |
           python -m pip install --upgrade pip setuptools
           python -m pip install lektor
 
-      - name: Build lektor website
+      - name: Build lektor website / 构建lektor网站
         run: lektor build -O '${{ env.OUTPUT }}'
 
-      - name: Check for broken internal links
+      - name: Check for broken internal links / 检查内部坏接
         uses: wjdp/htmltest-action@master
         with:
           path: ${{ env.OUTPUT }}
@@ -46,7 +46,7 @@ jobs:
           skip_external: true
           log_level: 1
 
-      - name: Deploy lektor website
+      - name: Deploy lektor website / 部署lektor网站
         if: env.DEPLOY == 'true'
         run: lektor deploy -O '${{ env.OUTPUT }}' ghpages-https
         env:
