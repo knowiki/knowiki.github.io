@@ -1,4 +1,4 @@
-title: Quickstart
+title: Quickstart 快速入门
 ---
 summary: Covers how to create a very basic website project with Lektor and run it.
 ---
@@ -11,14 +11,20 @@ let Lektor generate a basic project layout for you.  This requires the use of
 the command line client which is the recommended way to do development until
 the website is ready for end user management.
 
+开始使用 Lektor 的最佳方法是使用该命令 `quickstart` 让 Lektor 为您生成基本项目布局。这需要使用命令行客户端，这是进行开发的推荐方法，直到网站准备好进行最终用户管理。
+
 If you do not have the `lektor` [command line executable :ref](../cli/)
 available yet just consult the [Installation :ref](../installation/) section of
 the documentation.
 
-## Creating a New Project
+如果您还没有可用的 `lektor` [命令行可执行文件 :ref](../cli/)，请参阅文档的[安装 :ref](../installation/)部分。
+
+## Creating a New Project / 创建新项目
 
 To create a new project open a terminal and navigate to the preferred location
 of your project.  Then execute the quickstart command to create a new project:
+
+要创建新项目，请打开终端并导航到项目的首选位置。然后执行快速入门命令以创建新项目：
 
 ```
 $ lektor quickstart
@@ -27,22 +33,30 @@ $ lektor quickstart
 This will ask you a few questions and then create a new Lektor project with
 some basic configuration for you.
 
+这将问您几个问题，然后为您创建一个新的 Lektor 项目，其中包含一些基本配置。
+
 ## Screencast
 
 If you want a video walkthrough you can have a look at the screencast which
 explains the quickstart project a bit:
 
+如果你想要视频演练，可以查看一下简要介绍快速入门项目的截屏视频：
+
 <iframe width="100%" height="410" frameborder="0" allowfullscreen="allowfullscreen"
   src="https://www.youtube.com/embed/lTWTCwuPdrU?autoplay=0&fs=1">
 </iframe>
 
-## Running your Project
+## Running your Project / 运行项目
 
 Now that you have a project you can run it.  As a developer the easiest way to
 do that is to use the `server` which runs the project on your local machine
 as if it was a dynamic website.
 
+现在你有一个项目，你可以运行它了。作为开发人员，最简单的方法是使用 `server` 在本地计算机上运行项目的，就好像它是一个动态网站一样。
+
 All you have to do is to enter your project directory and run it:
+
+您所要做的就是输入您的项目目录并运行它：
 
 ```
 $ cd yourproject
@@ -54,6 +68,8 @@ This will automatically start the server and you can navigate to
 
 You can keep the server running, it will automatically rebuild your files as
 they change.
+
+您可以保持服务器运行，它会在文件更改时自动重建文件。
 
 ## Accessing the Admin
 

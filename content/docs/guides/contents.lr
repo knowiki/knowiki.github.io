@@ -1,6 +1,6 @@
-title: Guides
+title: Guides 指南
 ---
-summary: Guides with solutions for common problems.
+summary: Guides with solutions for common problems. 提供常见问题解决方案的指南。
 ---
 sort_key: 100
 ---
@@ -12,3 +12,5 @@ Because Lektor is quite a generic system, sometimes it might not be quite
 obvious what the best course of action is.  This part of the documentation
 contains some guides that should help you find inspiration for solving certain
 problems.
+
+由于Lektor是一个非常通用的系统，有时可能不太清楚什么是最好的行动方案。文档的这一部分包含一些指南，这些指南应该可以帮助您找到解决某些问题的灵感。
