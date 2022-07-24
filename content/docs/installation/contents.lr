@@ -1,6 +1,6 @@
-title: Installation 安装
+title: Installation
 ---
-summary: How to install Lektor on your computer. 如何在计算机上安装Lektor。
+summary: How to install Lektor on your computer.
 ---
 sort_key: 50
 ---
@@ -31,7 +31,7 @@ following software installed on your computer:
   * On macOS `brew install ffmpeg` will do the trick.
   * On Windows you'll have to put a little [work :ext](https://www.wikihow.com/Install-FFmpeg-on-Windows) in.
 
-## Install pipx 安装 pipx
+## Install pipx
 
 Once you have those installed and have made sure that they are on your `PATH`, you can
 get Lektor installed with `pipx`. Selcet the `pipx` install method of your preference:

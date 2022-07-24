@@ -1,8 +1,8 @@
-title: Templates 模板
+title: Templates
 ---
 sort_key: 90
 ---
-summary: A quick introduction into templating in Lektor. 快速介绍 Lektor 中的模板。
+summary: A quick introduction into templating in Lektor.
 ---
 body:
 
@@ -12,54 +12,42 @@ be able to generate beautiful websites but if you want to dive deep into the
 powers of the templating language then you can learn more about it by
 reading the [Jinja2 Documentation :ext](http://jinja.pocoo.org/docs).
 
-Lektor 使用 [Jinja2 :ext](http://jinja.pocoo.org/) 模板语言从您的页面生成 HTML。你不需要了解 Jinja2 就能生成漂亮的网站，但如果你想深入了解模板语言的力量，那么你可以通过阅读 [Jinja2 文档 :ext](http://jinja.pocoo.org/docs)来了解更多关于它的信息。
-
 !! Templates are a very powerful component in Lektor.  A lot of documentation
 about the features of it can be found in the [Jinja2 Documentation
 :ext](http://jinja.pocoo.org/docs) as well as the [Lektor Template API
-Documentation :ext](../api/templates/).<br>模板是 Lektor 中一个非常强大的组件。关于它的功能，很多文档都可以在 [Jinja2 文档 :ext](http://jinja.pocoo.org/docs)以及 [Lektor 模板 API 文档 :ext](../api/templates/)中找到。
+Documentation :ext](../api/templates/).
 
-## Template Folder and Naming 模板文件夹和命名
+## Template Folder and Naming
 
 All templates are stored within the `templates/` folder.  Templates typically
 carry a `.html` extension.  The default naming convention which is used in
 Lektor is that the template name matches the model name.
 
-所有模板都存储在 `templates/` 文件夹中。模板通常带有 `.html` 扩展名。Lektor 中使用的默认命名约定是模板名称与模型名称匹配。
-
 So if you have a model called `page` there would be a template named
 `page.html`.  Pages can however manually force a different template to be
 rendered.
 
-因此，如果您有一个名为 的模型，则会有一个名为 `page.html` 的模板。但是，页面可以手动强制呈现其他模板。
-
-## Template Context 模板上下文
+## Template Context
 
 When a template is rendered it's rendered in the context of a few variables.
 Which ones are available often depends on the situation the template is
 evaluated in but the following are always available:
 
-呈现模板时，它会在几个变量的上下文中呈现。哪些模板可用通常取决于评估模板的情况，但以下始终可用：
-
-| Variable 变量       | Description 描述
+| Variable       | Description
 | -------------- | --------------------------------------------------------
-| `this`	 | The current [Record :ref](../api/db/record/) that is being rendered.<br>正在呈现的当前[记录 :ref](../api/db/record/)。
-| `site`	 | The database [Pad :ref](../api/db/pad/) that can be used to query the site.<br>可用于查询站点的数据库 [Pad :ref](../api/db/pad/)。
-| `alt`          | A string that identifies the [Alternative :ref](../content/alts/) of the page.<br>标识页面的[替代项 :ref](../content/alts/)的字符串。
-| `config`       | Gives access to the Lektor project configuration.<br>提供对 Lektor 项目配置的访问权限。
+| `this`	 | The current [Record :ref](../api/db/record/) that is being rendered.
+| `site`	 | The database [Pad :ref](../api/db/pad/) that can be used to query the site.
+| `alt`          | A string that identifies the [Alternative :ref](../content/alts/) of the page.
+| `config`       | Gives access to the Lektor project configuration.
 
-## The First Template 第一个模板
+## The First Template
 
 So let's dive in making our first template.  In case you went through the
 [Quickstart :ref](../quickstart/) you should already have an example model
 to work with called `page`, otherwise just add one with the format shown
 in the [Data Modelling Documentation :ref](../models/).
 
-因此，让我们开始制作我们的第一个模板。如果你已完成[快速入门 :ref](../quickstart/)，则应该已经有一个示例模型可以使用，称为 `page`，否则只需使用[数据建模文档 :ref](../models/)中所示的格式添加一个示例模型即可。
-
 With that we can create a page template named `templates/page.html`:
-
-有了这个，我们可以创建一个名为 `templates/page.html`：
 
 ```html+jinja
 {% extends "layout.html" %}
@@ -73,25 +61,22 @@ With that we can create a page template named `templates/page.html`:
 If you are unfamiliar with Jinja this template might look very confusing, but
 worry not.  We will go through it step by step.
 
-如果你不熟悉 Jinja 这个模板可能看起来很混乱，但不用担心。我们将一步一步地进行。
-
 * `{%` starts a Jinja section and `%}` ends it
-  <br>`{%` 启动 Jinja 部分并 `%}` 结束它。
-* `extends` is a tag that instructs Jinja to extend another template.  In this case we extend our layout template.  We will create this next.
-  <br>`extends` 是指示 Jinja 扩展另一个模板的标记。在本例中，我们扩展布局模板。接下来我们将创建它。
-* `block` creates or updates a block from the layout template.  In this case we have two blocks: one for the `title` of the page and another one for the `body`.
-  <br>`block` 从布局模板创建或更新块。在本例中，我们有两个块：一个用于 `title` 页面，另一个用于 `body`。
-* `{{` prints a variable and `}}` is the end of the print part.  We do not need to worry about escaping here as Jinja2 does that automatically for us.
-  <br>`{{` 打印变量，并且 `}}` 是打印部件的结尾。我们不必担心逃离这里，因为 Jinja2 会自动为我们做到这一点。
+* `extends` is a tag that instructs Jinja to extend another template.  In
+  this case we extend our layout template.  We will create this next.
+* `block` creates or updates a block from the layout template.  In this case
+  we have two blocks: one for the `title` of the page and another one for
+  the `body`.
+* `{{` prints a variable and `}}` is the end of the print part.  We do not
+  need to worry about escaping here as Jinja2 does that automatically for
+  us.
 
-## Layout Templates 模板布局
+## Layout Templates
 
 So we have this page template now, but what about this layout?  Jinja2
 supports template inheritance where one template can inherit code from
 another.  In this case we configured our page template to inherit from
 `layout.html`.  Let's create it:
-
-所以我们现在有这个页面模板，但是这个布局呢？Jinja2 支持模板继承，其中一个模板可以从另一个模板继承代码。在本例中，我们将页面模板配置为从 `layout.html` 继承。让我们创建它：
 
 ```html+jinja
 <!doctype html>
@@ -110,15 +95,12 @@ another.  In this case we configured our page template to inherit from
 </body>
 ```
 
-I hope you can see how the blocks work together now when template inheritance is involved.
+I hope you can see how the blocks work together now when template inheritance
+is involved.
 
-我希望您现在可以看到当涉及模板继承时，这些块如何协同工作。
-
-## Everything about Templates 关于模板的一切
+## Everything about Templates
 
 Templates are the bread and butter of creating expressive websites with
 Lektor.  As such this is one of the most complex topics in the documentation
 and split into smaller parts.  Feel free to experiment around to see what
 you can do with it.
-
-模板是使用 Lektor 创建富有表现力的网站的面包和黄油。因此，这是文档中最复杂的主题之一，并分为较小的部分。随意尝试一下，看看你可以用它做什么。
