@@ -1,6 +1,6 @@
 _model: doc-page
 ---
-title: Documentation
+title: Documentation 文档
 ---
 allow_comments: no
 ---
@@ -11,7 +11,11 @@ about how to use Lektor from both a developer's as well as an end user's
 point of view.  New to Lektor?  Then read about [what makes Lektor
 special :ref](what/).
 
+欢迎来到 Lektor 文档中心。在这里，您可以从开发人员和最终用户的角度找到有关如何使用 Lektor 的所有信息。Lektor 新手？那就阅读有关 [Lektor 的特别之处 :ref](what/)。
+
 The documentation is a work in progress and there will be areas that are
 lacking.  If you have any feedback or you want to help out with the
 documentation project you can head over to the
 [GitHub Repository :ext](https://github.com/lektor/lektor-website) of this website.
+
+该文件是一项正在进行的工作，将有一些领域是缺乏的。如果您有任何反馈或想帮助文档项目，可以前往本网站的 [GitHub 仓库 :ext](https://github.com/lektor/lektor-website)。
