@@ -17,7 +17,8 @@ Lektor 使用 [Jinja2 :ext](http://jinja.pocoo.org/) 模板语言从您的页面
 !! Templates are a very powerful component in Lektor.  A lot of documentation
 about the features of it can be found in the [Jinja2 Documentation
 :ext](http://jinja.pocoo.org/docs) as well as the [Lektor Template API
-Documentation :ext](../api/templates/).<br>模板是 Lektor 中一个非常强大的组件。关于它的功能，很多文档都可以在 [Jinja2 文档 :ext](http://jinja.pocoo.org/docs)以及 [Lektor 模板 API 文档 :ext](../api/templates/)中找到。
+Documentation :ext](../api/templates/).
+模板是 Lektor 中一个非常强大的组件。关于它的功能，很多文档都可以在 [Jinja2 文档 :ext](http://jinja.pocoo.org/docs)以及 [Lektor 模板 API 文档 :ext](../api/templates/)中找到。
 
 ## Template Folder and Naming 模板文件夹和命名
 
@@ -43,10 +44,10 @@ evaluated in but the following are always available:
 
 | Variable 变量       | Description 描述
 | -------------- | --------------------------------------------------------
-| `this`	 | The current [Record :ref](../api/db/record/) that is being rendered.<br>正在呈现的当前[记录 :ref](../api/db/record/)。
-| `site`	 | The database [Pad :ref](../api/db/pad/) that can be used to query the site.<br>可用于查询站点的数据库 [Pad :ref](../api/db/pad/)。
-| `alt`          | A string that identifies the [Alternative :ref](../content/alts/) of the page.<br>标识页面的[替代项 :ref](../content/alts/)的字符串。
-| `config`       | Gives access to the Lektor project configuration.<br>提供对 Lektor 项目配置的访问权限。
+| `this`	 | The current [Record :ref](../api/db/record/) that is being rendered. 正在呈现的当前[记录 :ref](../api/db/record/)。
+| `site`	 | The database [Pad :ref](../api/db/pad/) that can be used to query the site. 可用于查询站点的数据库 [Pad :ref](../api/db/pad/)。
+| `alt`          | A string that identifies the [Alternative :ref](../content/alts/) of the page. 标识页面的[替代项 :ref](../content/alts/)的字符串。
+| `config`       | Gives access to the Lektor project configuration. 提供对 Lektor 项目配置的访问权限。
 
 ## The First Template 第一个模板
 
@@ -76,13 +77,13 @@ worry not.  We will go through it step by step.
 如果你不熟悉 Jinja 这个模板可能看起来很混乱，但不用担心。我们将一步一步地进行。
 
 * `{%` starts a Jinja section and `%}` ends it
-  <br>`{%` 启动 Jinja 部分并 `%}` 结束它。
+  `{%` 启动 Jinja 部分并 `%}` 结束它。
 * `extends` is a tag that instructs Jinja to extend another template.  In this case we extend our layout template.  We will create this next.
-  <br>`extends` 是指示 Jinja 扩展另一个模板的标记。在本例中，我们扩展布局模板。接下来我们将创建它。
+  `extends` 是指示 Jinja 扩展另一个模板的标记。在本例中，我们扩展布局模板。接下来我们将创建它。
 * `block` creates or updates a block from the layout template.  In this case we have two blocks: one for the `title` of the page and another one for the `body`.
-  <br>`block` 从布局模板创建或更新块。在本例中，我们有两个块：一个用于 `title` 页面，另一个用于 `body`。
+  `block` 从布局模板创建或更新块。在本例中，我们有两个块：一个用于 `title` 页面，另一个用于 `body`。
 * `{{` prints a variable and `}}` is the end of the print part.  We do not need to worry about escaping here as Jinja2 does that automatically for us.
-  <br>`{{` 打印变量，并且 `}}` 是打印部件的结尾。我们不必担心逃离这里，因为 Jinja2 会自动为我们做到这一点。
+  `{{` 打印变量，并且 `}}` 是打印部件的结尾。我们不必担心逃离这里，因为 Jinja2 会自动为我们做到这一点。
 
 ## Layout Templates 模板布局
 
