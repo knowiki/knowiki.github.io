@@ -16,12 +16,12 @@
         <button type="button" class="navbar-toggle collapsed"
           data-toggle="collapse" data-target="#navbar"
           aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">切换导航</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ '/'|url }}">Lektor</a>
+        <a class="navbar-brand" href="{{ '/'|url }}">KnoWiki</a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -54,14 +54,14 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4 icon-bar">
-          <a href="https://github.com/lektor/lektor/" title="Lektor on GitHub"
+          <!-- <a href="https://github.com/lektor/lektor/" title="Lektor on GitHub"
             ><i class="fa fa-github"></i></a>
           <a href="https://github.com/lektor/lektor/issues/" title="Report Issues for Lektor"
             ><i class="fa fa-bug"></i></a>
           <a href="https://twitter.com/getlektor" title="Find Lektor on Twitter"
             ><i class="fa fa-twitter"></i></a>
           <a href="https://gitter.im/lektor/lektor" title="Chat on Gitter"
-            ><i class="fa fa-comment"></i></a>
+            ><i class="fa fa-comment"></i></a> -->
           {%- if this.path %}
           <a href="https://github.com/lektor/lektor-website/tree/master/content{% if this.path != '/'
             %}{{ this.path.split('@')[0]}}{% endif %}/contents.lr" title="View source for this page"><i class="fa fa-code"></i></a>
@@ -78,7 +78,7 @@
   {% endblock %}
 
   <script type=text/javascript src="{{ '/static/app.js'|asseturl }}" charset="utf-8"></script>
-  <script>
+<!--   <script>
     ((window.gitter = {}).chat = {}).options = {
       room: 'lektor/lektor',
       activationElement: null
@@ -94,9 +94,9 @@
       console.debug("Respecting Do-Not-Track, not running analytics.");
     }
   </script>
-  <script async src='https://www.google-analytics.com/analytics.js'></script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script> -->
   <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-  <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+  <!-- <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script> -->
 </body>
 </html>
